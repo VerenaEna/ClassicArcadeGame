@@ -2,7 +2,7 @@
 var Enemy = function(x,y,speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
-    this.x = x;
+    this.x = x - 150;
     this.y = y;
     this.speed = speed;
     // The image/sprite for our enemies, this uses
@@ -20,8 +20,8 @@ Enemy.prototype.update = function(dt) {
 
     // if enemies reaches the end of the canvas, enemies start again from left with random speed
     if(this.x >= 510){
-      this.x = -50;
-      this.speed = 50 + Math.floor(Math.random() * 233);
+      this.x = -100;
+      this.speed = 150 + (Math.floor(Math.random() * 251));
     }
 };
 
