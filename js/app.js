@@ -34,16 +34,18 @@ var Player = function(x,y) {
     this.y = y;
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.player = 'images/char-cat-girl.png';
 };
 
 Player.prototype.update = function(dt) {
-    
+
 };
 
 Player.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.drawImage(Resources.get(this.player), this.x, this.y);
 };
+
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
