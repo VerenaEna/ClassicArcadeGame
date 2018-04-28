@@ -50,10 +50,17 @@ Player.prototype.render = function() {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-let allEnemies = [
-  new Enemy(0, 58, 200),
-  new Enemy(25, 144, 150),
-  new Enemy(50, 226, 300)];
+let allEnemies = [];
+let enemyLoc = [58, 144, 226];
+
+// Ittarate through each enemy located on the y axis
+// starting from 0 on the x axis move at a speed of 200 
+// Until randomly regenerated in the enemy update function above
+enemyLoc.forEach(function (locationY) {
+  enemy = new Enemy(0, locationY, 200);
+  allEnemies.push(enemy);
+});
+
 const player = new Player(202,405);
 
 
