@@ -17,6 +17,12 @@ Enemy.prototype.update = function(dt) {
     this.x = this.x + this.speed * dt;
     // which will ensure the game runs at the same speed for
     // all computers.
+
+    // if enemies reaches the end of the canvas, enemies start again from left with random speed
+    if(this.x >= 510){
+      this.x = -50;
+      this.speed = 50 + Math.floor(Math.random() * 233);
+    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -54,7 +60,7 @@ let allEnemies = [];
 let enemyLoc = [58, 144, 226];
 
 // Ittarate through each enemy located on the y axis
-// starting from 0 on the x axis move at a speed of 200 
+// starting from 0 on the x axis move at a speed of 200
 // Until randomly regenerated in the enemy update function above
 enemyLoc.forEach(function (locationY) {
   enemy = new Enemy(0, locationY, 200);
