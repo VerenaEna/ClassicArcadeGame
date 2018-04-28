@@ -50,9 +50,12 @@ Player.prototype.render = function() {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-let allEnemies = [];
+let allEnemies = [
+  new Enemy(0, 58, 200),
+  new Enemy(25, 144, 150),
+  new Enemy(50, 226, 300)];
+const player = new Player(202,405);
 
-const player = new Player();
 
 
 // This listens for key presses and sends the keys to your
