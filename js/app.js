@@ -23,6 +23,10 @@ Enemy.prototype.update = function(dt) {
       this.x = -100;
       this.speed = 150 + (Math.floor(Math.random() * 251));
     }
+
+    //TODO: chech for collision of player with enemy
+    // research: https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      // TODO: add reset();
 };
 
 // Draw the enemy on the screen, required method for game
@@ -50,7 +54,21 @@ Player.prototype.update = function(dt) {
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
 };
-
+//TODO: add method to check player can not move offscreen
+Player.prototype.handleInput = function(keypress) {
+    if(keypress == 'left'){
+      this.x = this.x - 100;
+    };
+    if(keypress == 'right'){
+      this.x = this.x + 100;
+    };
+    if(keypress == 'up'){
+      this.y = this.y - 100;
+    };
+    if(keypress == 'down'){
+      this.y = this.y + 100;
+    }
+};
 
 
 // Now instantiate your objects.
