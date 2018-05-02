@@ -1,3 +1,10 @@
+/*TODO: creative extra!
+  - the player has 3 lives from start - if player collide he loose one live - if he lost all lives - modal appears?
+  - collectable items - if all items found - modal appears
+  - timer?
+  - counter! missed attempt // found the water
+*/
+
 // Enemies our player must avoid
 var Enemy = function(x,y,speed) {
     // Variables applied to each of our instances go here,
