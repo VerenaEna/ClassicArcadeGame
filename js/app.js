@@ -1,10 +1,3 @@
-/*TODO: creative extra!
-  - the player has 3 lives from start - if player collide he loose one live - if he lost all lives - modal appears?
-  - collectable items - if all items found - modal appears
-  - timer?
-  - counter! missed attempt // found the water
-*/
-
 // Enemies our player must avoid
 var Enemy = function(x,y,speed) {
   // Variables applied to each of our instances go here,
@@ -35,7 +28,9 @@ Enemy.prototype.update = function(dt) {
    player.y < this.y + 50 &&
    50 + player.y > this.y) {
      player.reset();
+     score.updateAttempts();
      score.updateMiss();
+     score.difference();
   }
 };
 
@@ -89,23 +84,36 @@ Player.prototype.handleInput = function(keypress) {
     setTimeout(() => {
       this.x = 202;
       this.y = 405;
+      alert("You've reached the water");
     }, 300);
-    score.updateSucess();
+    score.updateAttempts();
+    score.finalScore();
   }
 };
 // method to get the score
 const Score = function(){
   this.sucess = 0;
-  this.miss = 0;
+  this.attempts = 0;
+  this.missed = 0;
+  this.final = 0;
 }
-Score.prototype.updateSucess = function() {
-  this.sucess += 1;
-  document.getElementById('score--sucess').innerHTML = this.sucess;
-};
 Score.prototype.updateMiss = function() {
-  this.miss += 1;
-  document.getElementById('score--lost').innerHTML = this.miss;
+  this.missed++;
+  document.getElementById('score--missed').innerHTML = this.missed;
 };
+Score.prototype.difference = function () {
+  this.sucess--;
+  document.getElementById('score--final').innerHTML = this.final;
+};
+Score.prototype.updateAttempts = function() {
+  this.attempts++;
+  document.getElementById('score--attempts').innerHTML = this.attempts;
+};
+Score.prototype.finalScore = function() {
+  this.final++;
+  document.getElementById('score--final').innerHTML = this.final;
+};
+
 
 // Now instantiate your objects.
 
