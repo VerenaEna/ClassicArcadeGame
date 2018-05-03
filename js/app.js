@@ -91,6 +91,7 @@ Player.prototype.handleInput = function(keypress) {
     }, 300);
   }
 };
+
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 let allEnemies = [];
