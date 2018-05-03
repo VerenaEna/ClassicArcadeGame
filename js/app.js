@@ -32,13 +32,12 @@ Enemy.prototype.update = function(dt) {
     }
     //checks for collision of player with enemy
     // research: https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
-    // TODO: add reset();
+
     if (player.x < this.x + 50 &&
      player.x + 50 > this.x &&
      player.y < this.y + 50 &&
      50 + player.y > this.y) {
-       player.x = 202;
-       player.y = 405;
+       player.reset();
     }
 };
 
@@ -68,6 +67,10 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
 };
 
+Player.prototype.reset = function(){
+  player.x = 202;
+  player.y = 405;
+};
 // method to move with arrow keys
 // method to check player can not move offscreen
 Player.prototype.handleInput = function(keypress) {
