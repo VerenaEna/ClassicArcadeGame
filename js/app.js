@@ -35,6 +35,7 @@ Enemy.prototype.update = function(dt) {
    player.y < this.y + 50 &&
    50 + player.y > this.y) {
      player.reset();
+     score.updateMiss();
   }
 };
 
@@ -89,14 +90,28 @@ Player.prototype.handleInput = function(keypress) {
       this.x = 202;
       this.y = 405;
     }, 300);
+    score.updateSucess();
   }
 };
 
+const Score = function(){
+  this.sucess = 0;
+  this.miss = 0;
+}
+Score.prototype.updateSucess = function() {
+  this.sucess += 1;
+  document.getElementById('score--sucess').innerHTML = this.sucess;
+};
+Score.prototype.updateMiss = function() {
+  this.miss += 1;
+  document.getElementById('score--lost').innerHTML = this.miss;
+};
+
 // Now instantiate your objects.
+
 // Place all enemy objects in an array called allEnemies
 let allEnemies = [];
 let enemyLoc = [58, 144, 226];
-
 // Ittarate through each enemy located on the y axis
 // starting from 0 on the x axis with a move speed of 200
 enemyLoc.forEach(function (locationY) {
@@ -105,7 +120,8 @@ enemyLoc.forEach(function (locationY) {
 });
 // Place the player object in a variable called player
 const player = new Player(202,405);
-
+// new score 
+const score = new Score();
 
 
 // This listens for key presses and sends the keys to your
