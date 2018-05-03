@@ -93,7 +93,7 @@ Player.prototype.handleInput = function(keypress) {
     score.updateSucess();
   }
 };
-
+// method to get the score
 const Score = function(){
   this.sucess = 0;
   this.miss = 0;
@@ -120,7 +120,7 @@ enemyLoc.forEach(function (locationY) {
 });
 // Place the player object in a variable called player
 const player = new Player(202,405);
-// new score 
+// new score
 const score = new Score();
 
 
