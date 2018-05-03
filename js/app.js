@@ -76,6 +76,13 @@ Player.prototype.handleInput = function(keypress) {
     if(keypress == 'down' && this.y < 400){
       this.y = this.y + 83;
     }
+    // if player reaches the top - water - the player moves on start position
+    if(this.y < 0){
+      setTimeout(() => {
+        this.x = 202;
+        this.y = 405;
+      }, 300);
+    }
 };
 
 
