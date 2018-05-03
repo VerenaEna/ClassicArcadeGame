@@ -1,6 +1,38 @@
-frontend-nanodegree-arcade-game
-===============================
+- Ena's Aracade Game Clone - Frogger
+======================================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Description](#description)
+* [Installing from Source](#installing)
+* [How to play](#how2play)
+* [Tools used](#tools)
+* [Inspiration](#inspiration)
+
+## Description
+In the FEND, we have to make a clone of the classic Arcade Game named FROGGER. The User has to move the char from the grass over the road and into the water. Its important to avoid the bugs that travel on the road. If the User collides the char with a bug, the char is reset back at the beginning. Upon reaching the water, you get one Point to sucess and reset back to the starting Point
+
+## Installing from Source
+Clone the following repo:
+
+git clone https://github.com/verenaena/ClassicArcadeGame
+Load index.html in browser.
+
+## Play the game
+Here you can play the game direct in the browser without downloading anything! Click in the following link to play: [<a href="[link to project gitpage .io]"></a>.]
+
+## How to Play
+- The goal is to jump into the water.
+
+- Using the arrow keys on your keyboard.
+
+- Try to avoid the cockroaches and jump into the water.
+
+- If you reached the water, you get an Point and you can play again. If you collided with a cockroach, you loose your point!
+
+## Tools used
+Getting started Udacity excersize:
+https://github.com/udacity/frontend-nanodegree-arcade-game
+
+## Inspiration
+Collision function: https://stackoverflow.com/questions/2440377/javascript-collision-detection
