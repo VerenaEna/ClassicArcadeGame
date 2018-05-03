@@ -61,19 +61,20 @@ Player.prototype.update = function(dt) {
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
 };
-//TODO: add method to check player can not move offscreen
+// method to move with arrow keys
+// method to check player can not move offscreen
 Player.prototype.handleInput = function(keypress) {
-    if(keypress == 'left'){
+    if(keypress == 'left' && this.x > 50){
       this.x = this.x - 100;
     };
-    if(keypress == 'right'){
+    if(keypress == 'right' && this.x < 400){
       this.x = this.x + 100;
     };
-    if(keypress == 'up'){
-      this.y = this.y - 100;
+    if(keypress == 'up' && this.y > 0){
+      this.y = this.y - 83;
     };
-    if(keypress == 'down'){
-      this.y = this.y + 100;
+    if(keypress == 'down' && this.y < 400){
+      this.y = this.y + 83;
     }
 };
 
@@ -85,8 +86,7 @@ let allEnemies = [];
 let enemyLoc = [58, 144, 226];
 
 // Ittarate through each enemy located on the y axis
-// starting from 0 on the x axis move at a speed of 200
-// Until randomly regenerated in the enemy update function above
+// starting from 0 on the x axis with a move speed of 200
 enemyLoc.forEach(function (locationY) {
   enemy = new Enemy(0, locationY, 200);
   allEnemies.push(enemy);
