@@ -53,7 +53,6 @@ var Player = function(x,y) {
 };
 
 Player.prototype.update = function() {
-
 };
 
 Player.prototype.render = function() {
@@ -67,16 +66,16 @@ Player.prototype.reset = function(){
 // method to move with arrow keys
 // method to check player can not move offscreen
 Player.prototype.handleInput = function(keypress) {
-  if(keypress == 'left' && this.x > 50){
+  if(keypress == 'left' || keypress == 'a' && this.x > 50 ){
     this.x = this.x - 100;
   };
-  if(keypress == 'right' && this.x < 400){
+  if(keypress == 'right' || keypress == 'd' && this.x < 400){
     this.x = this.x + 100;
   };
-  if(keypress == 'up' && this.y > 0){
+  if(keypress == 'up' || keypress == 'w' && this.y > 0){
     this.y = this.y - 83;
   };
-  if(keypress == 'down' && this.y < 400){
+  if(keypress == 'down' || keypress == 's' && this.y < 400){
     this.y = this.y + 83;
   }
   // if player reaches the top - water - the player moves on start position with a delay
@@ -117,7 +116,7 @@ Score.prototype.finalScore = function() {
 
 // Now instantiate your objects.
 
-// Place all enemy objects in an array called allEnemies
+// Place all enemy objects in an array called allEnemies and set the Location
 let allEnemies = [];
 let enemyLoc = [58, 144, 226];
 // Ittarate through each enemy located on the y axis
@@ -128,7 +127,7 @@ enemyLoc.forEach(function (locationY) {
 });
 // Place the player object in a variable called player
 const player = new Player(202,405);
-// new score
+// to get the score
 const score = new Score();
 
 
@@ -139,7 +138,11 @@ document.addEventListener('keyup', function(e) {
       37: 'left',
       38: 'up',
       39: 'right',
-      40: 'down'
+      40: 'down',
+      65: 'a',
+      68: 'd',
+      87: 'w',
+      83: 's'
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
