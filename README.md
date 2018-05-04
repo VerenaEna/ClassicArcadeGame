@@ -23,7 +23,7 @@ Here you can play the game direct in the browser without downloading anything! C
 ## How to Play
 - The goal is to jump into the water.
 
-- Using the arrow keys on your keyboard.
+- You can use the arrow keys on your keyboard or you move with the W - S - A - D
 
 - Try to avoid the cockroaches and jump into the water.
 
