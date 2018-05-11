@@ -2,6 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
 }
 
 header {
@@ -82,7 +83,7 @@ span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 16%;
+  width: 21%;
 }
 
 .type {
