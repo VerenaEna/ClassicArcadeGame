@@ -83,7 +83,6 @@ Player.prototype.handleInput = function(keypress) {
     setTimeout(() => {
       this.x = 202;
       this.y = 405;
-      alert("You've reached the water");
     }, 300);
     score.updateAttempts();
     score.finalScore();
@@ -112,7 +111,11 @@ Score.prototype.finalScore = function() {
   this.final++;
   document.getElementById('score--final').innerHTML = this.final;
 };
-
+// event listener function for click notes
+function show(){
+  let notes = document.getElementById('notes');
+  notes.classList.toggle('show');
+}
 
 // Now instantiate your objects.
 
@@ -146,4 +149,9 @@ document.addEventListener('keyup', function(e) {
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
+});
+
+let iNotes = document.getElementById('instruction');
+iNotes.addEventListener('click', function() {
+  show();
 });
