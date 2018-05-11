@@ -1,4 +1,4 @@
-- Ena's Aracade Game Clone - Frogger
+# Ena's Aracade Game Clone - Frogger
 ======================================
 
 ## Table of Contents
