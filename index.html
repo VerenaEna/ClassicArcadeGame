@@ -8,19 +8,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
 </head>
 <body>
-  <main>
 
+  <header id="header">
     <h1>Frogger Arcade Game</h1>
+  </header>
 
-    <section class="instruction">
-      <p>Instructor Notes: Use the arrow keys to move your Char. <br>
-        Try to reach the water without colliding the bugs! Have fun :)</p>
-    </section>
+  <main>
+    <aside id="instruction">
+      <h2>How it works? <i class="fas fa-sort-down"></i></h2>
+      <p id="notes" class="notes">Use the arrow keys or W - S - A - D to move your Char. <br>
+        W goes <i class="fas fa-arrow-up"></i>, S goes <i class="fas fa-arrow-down"></i>, A goes <i class="fas fa-arrow-left"></i> and D goes <i class="fas fa-arrow-right"></i>. <br>
+        Try to reach the water without hitting the bugs! Have fun :)</p>
+    </aside>
 
-    <section class="wrapper">
-      <div id="game"></div>
+
+    <section id="wrapper">
     </section>
-  </main>
 
   <section class="score-container">
     <p>
@@ -28,6 +31,7 @@
       You crossed the street <span id="score--attempts">0</span> time(s) and <span id="score--missed">0</span> Bugs catched you.
     </p>
   </section>
+</main>
 
   <footer>
     <p>
