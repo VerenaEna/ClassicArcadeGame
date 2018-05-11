@@ -66,16 +66,16 @@ Player.prototype.reset = function(){
 // method to move with arrow keys
 // method to check player can not move offscreen
 Player.prototype.handleInput = function(keypress) {
-  if(keypress == 'left' || keypress == 'a' && this.x > 50 ){
+  if(keypress == 'left' && this.x > 50 || keypress == 'a' && this.x > 50 ){
     this.x = this.x - 100;
   };
-  if(keypress == 'right' || keypress == 'd' && this.x < 400){
+  if(keypress == 'right' && this.x < 400 || keypress == 'd' && this.x < 400){
     this.x = this.x + 100;
   };
-  if(keypress == 'up' || keypress == 'w' && this.y > 0){
+  if(keypress == 'up' && this.y > 0 || keypress == 'w' && this.y > 0){
     this.y = this.y - 83;
   };
-  if(keypress == 'down' || keypress == 's' && this.y < 400){
+  if(keypress == 'down' && this.y < 400 || keypress == 's' && this.y < 400){
     this.y = this.y + 83;
   }
   // if player reaches the top - water - the player moves on start position with a delay
