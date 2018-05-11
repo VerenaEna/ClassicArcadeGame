@@ -14,10 +14,11 @@ In the FEND, we have to make a clone of the classic Arcade Game named FROGGER. T
 Clone or download the following repo:
 
 git clone https://github.com/verenaena/ClassicArcadeGame
+
 Load index.html in browser.
 
 ## Play the game
-Here you can play the game direct in the browser without downloading anything! Click in the following link to play: [<a href="[link to project gitpage .io]"></a>.]
+Here you can play the game direct in the browser without downloading anything! Click in the following link to play: https://verenaena.github.io/ClassicArcadeGame/
 
 ## How to Play
 - The goal is to jump from the green grassfield into the water.
