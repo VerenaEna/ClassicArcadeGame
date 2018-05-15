@@ -25,9 +25,7 @@ Here you can play the game direct in the browser without downloading anything! C
 
 - You can use the arrow keys on your keyboard or you move with W - S - A - D
 
-- Try to avoid a collision with the bugs and jump into the water.
-
-- If you reached the water 10x, you get an Point and you can play again. If you collide with a cockroach, you loose the point!
+- Try to avoid a collision with the bugs and jump into the water.!
 
 ## Inspiration
-Collision function: https://stackoverflow.com/questions/2440377/javascript-collision-detection
+Collision function: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
