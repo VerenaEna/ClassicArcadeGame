@@ -9,7 +9,7 @@ header {
   border-bottom: 1px solid #00567e;
 }
 
-h2{
+h2 {
   margin-right: 1rem;
   cursor: pointer;
 }
@@ -30,11 +30,6 @@ main {
   height: 580px;
 }
 
-#wrapper {
-  height: 533px;
-  margin: 0 0 1rem;
-}
-
 footer {
   position: fixed;
   left: 0;
@@ -52,6 +47,11 @@ footer {
 span {
   font-weight: bold;
   position: relative;
+}
+
+#wrapper {
+  height: 533px;
+  margin: 0 0 1rem;
 }
 
 #instruction {
@@ -92,14 +92,4 @@ span {
   border-radius: 2px;
   padding: 1px;
   width: 20px;
-}
-
-@media screen and (max-width:1024px){
-  .show {
-    width: 90%;
-  }
-  .score-container {
-    position: relative;
-    top: 0;
-  }
 }
