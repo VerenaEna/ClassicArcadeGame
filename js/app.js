@@ -70,16 +70,16 @@ Player.prototype = {
   handleInput: function(keypress) {
     if(keypress == 'left' && this.x > 50 || keypress == 'a' && this.x > 50 ){
       this.x = this.x - 100;
-    };
+    }
     if(keypress == 'right' && this.x < 400 || keypress == 'd' && this.x < 400){
       this.x = this.x + 100;
-    };
+    }
     if(keypress == 'up' && this.y > 0 || keypress == 'w' && this.y > 0){
       this.y = this.y - 83;
-    };
+    }
     if(keypress == 'down' && this.y < 400 || keypress == 's' && this.y < 400){
       this.y = this.y + 83;
-    };
+    }
     // if player reaches the top - water - the player moves on start position with a delay
     if(this.y < 0){
       setTimeout(() => {
@@ -87,7 +87,7 @@ Player.prototype = {
       }, 300);
       score.updateAttempts();
       score.finalScore();
-    };
+    }
     // if the player reaches the water 10 times - finish game - reset everything to start
     if(score.attempts === 0){
       setTimeout(() => {
@@ -95,9 +95,9 @@ Player.prototype = {
         score.reset();
         player.reset();
       }, 300);
-    };
+    }
   },
-}
+};
 
 // method to get the score
 const Score = function(){
@@ -105,7 +105,8 @@ const Score = function(){
   this.attempts = 10;
   this.missed = 0;
   this.final = 0;
-}
+};
+
 Score.prototype = {
   updateMiss: function() {
     this.missed++;
