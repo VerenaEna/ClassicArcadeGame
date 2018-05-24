@@ -29,3 +29,6 @@ Here you can play the game direct in the browser without downloading anything! C
 
 ## Inspiration
 Collision function: https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
+
+## Issues
+https://en.wikipedia.org/wiki/Off-by-one_error
